@@ -1,0 +1,87 @@
+@* Vardiya Left *@
+@model List<Entities.DTO.VardiyaDetailListSectionByDep>
+<div class="card">
+    <div class="card-header bg-danger">
+        <div class="card-text">.Hafta Vardiya Atanmamış Personel Listesi</div>
+    </div>
+    <div class="card-body">
+        <form asp-controller="BatteryInstallation" asp-action="add" method="post">
+
+            <div id="radio-buttons-vardiya" class="btn-group btn-group-toggle col mb-2" data-toggle="buttons">
+
+                <label class="btn btn-dark active col-2 float-left btn-sm">
+                    <input type="radio" name="options" id="option0" value="0" autocomplete="off" disabled>
+                    Vardiya
+                    <i class="fa-solid fa-angles-right"></i>
+                </label>
+
+                <label class="btn btn-outline-primary active col-2 float-left btn-sm">
+                    <input type="radio" name="options" id="option1" value="1" autocomplete="off" checked>
+                    08:00
+                    -
+                    16:00
+                </label>
+
+                <label class="btn btn-outline-primary col-2 float-left btn-sm">
+                    <input type="radio" name="options" id="option2" value="2" autocomplete="off"> 16:00 -
+                    24:00
+                </label>
+
+                <label class="btn btn-outline-primary col-2 float-left btn-sm">
+                    <input type="radio" name="options" id="option3" value="3" autocomplete="off"> 00:00 -
+                    08:00
+                </label>
+
+                <label class="btn btn-outline-success col-2 float-left btn-sm">
+                    <input type="radio" name="options" id="option4" value="4" autocomplete="off"> 08:00 -
+                    18:00
+                </label>
+                <label class="btn btn-outline-danger col-2 float-left btn-sm">
+                    <input type="radio" name="options" id="option5" value="5" autocomplete="off"> 08:00 -
+                    24:00
+                </label>
+            </div>
+
+            <table id="section-table-vardiya" class="table table-sm table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th style="max-width: 35px;"><i class="fa-solid fa-check"></i></th>
+                        <th hidden>.</th>
+                        <th hidden>.</th>
+                        <th hidden>.</th>
+                        <th>Personel Ad Soyad</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    <input hidden type="text" name="shiftidvardiya" id="shiftidvardiya" value="1">
+
+                    @for (int i = 0; i < Model.Count(); i++)
+                    {
+                        <tr>
+                            <td style="max-width: 25px;">@Html.CheckBoxFor(c=>Model[i].check)</td>
+                            <td hidden>@Html.TextBoxFor(m=> Model[i].SicilNo)</td>
+                            <td hidden>@Html.TextBoxFor(m=> Model[i].Ad)</td>
+                            <td hidden>@Html.TextBoxFor(m=> Model[i].Soyad)</td>
+                            <td>@Model[i].Ad @Model[i].Soyad</td>
+                        </tr>
+                    }
+
+
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th style="max-width: 35px;"><i class="fa-solid fa-check"></i></th>
+                        <th hidden>.</th>
+                        <th hidden>.</th>
+                        <th hidden>.</th>
+                        <th>Personel Ad Soyad</th>
+                    </tr>
+                </tfoot>
+            </table>
+            <button type="submit" class="btn btn-sm btn-success float-right mt-2">Vardiya Kaydet</button>
+        </form>
+    </div>
+</div>

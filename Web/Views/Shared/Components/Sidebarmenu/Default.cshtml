@@ -1,0 +1,72 @@
+<nav class="mt-2">
+    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+        <li class="nav-item menu-close">
+            <a href="#" class="nav-link active">
+                <i class="nav-icon fa-solid fa-gear"></i>
+                <p>
+                    Ayarlar
+                    <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                @* <li class="nav-item">
+                    <a asp-controller="appuser" asp-action="index" class="nav-link active">
+                    <i class="nav-icon fa-solid fa-user-plus"></i>
+                    <p>Kullanıcılar</p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a asp-controller="role" asp-action="index" class="nav-link">
+                    <i class="nav-icon fa-solid fa-flag"></i>
+                    <p>Roller</p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                    <a href="./index3.html" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard v3</p>
+                    </a>
+                    </li> *@
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a asp-controller="home" asp-action="index" class="nav-link">
+                <i class="nav-icon fa-solid fa-house"></i>
+                <p>
+                    Anasayfa
+                </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a asp-controller="humanresource" asp-action="index" class="nav-link">
+                <i class="nav-icon fa-solid fa-users fa-xs"></i>
+                <p>
+                    İnsan Kaynakları
+                </p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a asp-controller="section" asp-action="index" class="nav-link">
+                <i class="nav-icon fa-solid fa-puzzle-piece"></i>
+                <p>
+                    Bölümler
+                </p>
+            </a>
+        </li>
+
+        <li id="logout" class="nav-item mt-5">
+            <a asp-controller="home" asp-action="logout" class="nav-link">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                <p>
+                    Çıkış
+                </p>
+            </a>
+        </li>
+
+    </ul>
+</nav>

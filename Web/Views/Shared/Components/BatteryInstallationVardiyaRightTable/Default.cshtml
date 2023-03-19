@@ -1,0 +1,59 @@
+@model List<Entities.DTO.VardiyaDetailListSectionByDep>
+<div class="card">
+    <div class="card-header bg-success">
+        <div class="card-text"> .Hafta Vardiya Listesi</div>
+    </div>
+    <div class="card-body">
+        <div id="radio-buttons-vardiya" class="btn-group btn-group-toggle col mb-2" data-toggle="buttons">
+            <label class="btn btn-dark active col-2 float-left btn-sm">
+                <input type="radio" name="options" id="option0" value="0" autocomplete="off" disabled>
+                Vardiya
+                <i class="fa-solid fa-angles-right"></i>
+            </label>
+
+            <label class="btn btn-outline-primary active col-2 float-left btn-sm">
+                <input type="radio" name="options" id="option1" value="1" autocomplete="on" checked> 08:00
+                -
+                16:00
+            </label>
+
+            <label class="btn btn-outline-primary col-2 float-left btn-sm">
+                <input type="radio" name="options" id="option2" value="2" autocomplete="on"> 16:00 - 24:00
+            </label>
+
+            <label class="btn btn-outline-primary col-2 float-left btn-sm">
+                <input type="radio" name="options" id="option3" value="3" autocomplete="on"> 00:00 - 08:00
+            </label>
+
+            <label class="btn btn-outline-success col-2 float-left btn-sm">
+                <input type="radio" name="options" id="option4" value="4" autocomplete="on"> 08:00 - 18:00
+            </label>
+            <label class="btn btn-outline-danger col-2 float-left btn-sm">
+                <input type="radio" name="options" id="option5" value="5" autocomplete="on"> 08:00 - 24:00
+            </label>
+        </div>
+
+        <table id="example1-shift1-result" class="table table-sm table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Personel Ad Soyad</th>
+                    <th>Vardiya</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>#</th>
+                    <th>Personel Ad Soyad</th>
+                    <th>Vardiya</th>
+                </tr>
+            </tfoot>
+        </table>
+        <button id="vardiya-delete" type="submit" class="btn btn-sm btn-danger float-right mt-2">Vardiya
+            Sil</button>
+    </div>
+</div>

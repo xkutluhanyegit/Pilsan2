@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<!-- Small boxes (Stat box) -->
+<div class="row">
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-info">
+            <div class="inner">
+                <h3>IK</h3>
+
+                <p>İnsan Kaynakları</p>
+            </div>
+            <div class="icon">
+                <i class="nav-icon fa-solid fa-users"></i>
+            </div>
+            <a asp-controller="humanresource" asp-action="index" class="small-box-footer">Daha fazla bilgi.. <i
+                    class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+    <div class="col-lg-3 col-6">
+        <!-- small box -->
+        <div class="small-box bg-success">
+            <div class="inner">
+                <h3>Bölümler </h3>
+
+                <p>Bölümler</p>
+            </div>
+            <div class="icon">
+                <i class="nav-icon fa-solid fa-users-gear"></i>
+            </div>
+            <a asp-controller="section" asp-action="index" class="small-box-footer">Daha fazla bilgi.. <i
+                    class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+    <!-- ./col -->
+</div>
+<!-- /.row -->
+<!-- /.row (main row) -->
